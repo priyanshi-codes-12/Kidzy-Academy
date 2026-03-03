@@ -25,7 +25,7 @@ export default function Graduation() {
     /* 🛡️ overflow-x-hidden here is the key shield */
     <section 
       ref={sectionRef}
-      className="relative pt-32 pb-16 bg-gradient-to-b from-[#60a5fa] to-white overflow-x-hidden px-6 mt-[-2px]"
+      className="relative pt-32 pb-16 bg-linear-to-b from-[#60a5fa] to-white overflow-x-hidden px-6 mt--2px"
     >
       
       {/* ☀️ THE SUN - Contained within a relative wrapper */}
@@ -39,7 +39,7 @@ export default function Graduation() {
       <div className="absolute inset-0 pointer-events-none flex justify-center items-end overflow-hidden">
         <svg 
           viewBox="0 0 1000 500" 
-          className="w-[140%] md:w-[100%] h-auto opacity-40 mb-[-50px] max-w-none"
+          className="w-[140%] md:w-full h-auto opacity-40 -mb-12.5 max-w-none"
         >
           <g fill="none" strokeWidth="40" strokeLinecap="round" className={isVisible ? "animate-rainbow" : "opacity-0"}>
             <path d="M100,500 A400,400 0 0,1 900,500" stroke="#ff4d4d" className="arc-red" />
@@ -70,7 +70,7 @@ export default function Graduation() {
       {/* CONTENT AREA */}
       <div className="max-w-6xl mx-auto relative z-10 text-center">
         <h2 className="text-7xl font-black text-blue-900 mb-6 drop-shadow-md">
-          Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-yellow-500 to-purple-500">Join Us?</span>
+          Ready to <span className="text-transparent bg-clip-text bg-linear-to-r from-red-500 via-yellow-500 to-purple-500">Join Us?</span>
         </h2>
         <p className="text-2xl text-blue-800/70 font-bold mb-20">
           The storm has passed, and your child is ready to shine!
@@ -79,7 +79,7 @@ export default function Graduation() {
         {/* Signup Cards */}
         <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto mb-32">
           {['Explorer', 'Champion'].map((tier) => (
-            <div key={tier} className="bg-white/90 backdrop-blur-md p-10 rounded-[4rem] shadow-2xl border-b-[12px] border-blue-600">
+            <div key={tier} className="bg-white/90 backdrop-blur-md p-10 rounded-[4rem] shadow-2xl border-b-12 border-blue-600">
                <h3 className="text-3xl font-black text-gray-800">{tier}</h3>
                <button className="mt-8 w-full py-5 bg-blue-600 text-white rounded-3xl font-black">Sign Up Now!</button>
             </div>
