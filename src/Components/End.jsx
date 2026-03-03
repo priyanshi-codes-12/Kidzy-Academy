@@ -11,7 +11,7 @@ export default function Graduation() {
           setIsVisible(true);
         }
       },
-      { threshold: 0.1 } 
+      { threshold: 0.2 } 
     );
 
     if (sectionRef.current) {
