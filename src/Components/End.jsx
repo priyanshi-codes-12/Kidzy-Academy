@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-export default function Graduation() {
+export default function End({ onSignup }) {
   const sectionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -11,7 +11,7 @@ export default function Graduation() {
           setIsVisible(true);
         }
       },
-      { threshold: 0.1 } 
+      { threshold: 0.1 }
     );
 
     if (sectionRef.current) {
@@ -22,20 +22,21 @@ export default function Graduation() {
   }, []);
 
   return (
-    /* 🛡️ overflow-x-hidden here is the key shield */
-    <section 
+    <section
       ref={sectionRef}
-      className="relative pt-32 pb-16 bg-linear-to-b from-[#60a5fa] to-white overflow-x-hidden px-6 mt--2px"
+      /* 🎯 CRITICAL ID: Matches window.location.hash in Signup.jsx */
+      id="graduation"
+      className="relative pt-32 pb-16 bg-linear-to-b from-[#60a5fa] to-white overflow-x-hidden px-6 mt-[-2px]"
     >
       
-      {/* ☀️ THE SUN - Contained within a relative wrapper */}
+      {/* ☀️ THE SUN */}
       <div className="absolute top-10 right-10 z-0 pointer-events-none select-none">
         <div className="text-9xl animate-pulse opacity-80 filter drop-shadow-[0_0_50px_rgba(255,255,0,0.5)]">
           ☀️
         </div>
       </div>
 
-      {/* 🌈 SLOW ANIMATED RAINBOW - Set to overflow-hidden */}
+      {/* 🌈 SLOW ANIMATED RAINBOW */}
       <div className="absolute inset-0 pointer-events-none flex justify-center items-end overflow-hidden">
         <svg 
           viewBox="0 0 1000 500" 
@@ -76,12 +77,16 @@ export default function Graduation() {
           The storm has passed, and your child is ready to shine!
         </p>
 
-        {/* Signup Cards */}
         <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto mb-32">
           {['Explorer', 'Champion'].map((tier) => (
             <div key={tier} className="bg-white/90 backdrop-blur-md p-10 rounded-[4rem] shadow-2xl border-b-12 border-blue-600">
                <h3 className="text-3xl font-black text-gray-800">{tier}</h3>
-               <button className="mt-8 w-full py-5 bg-blue-600 text-white rounded-3xl font-black">Sign Up Now!</button>
+               <button 
+                 onClick={() => onSignup(tier)}
+                 className="mt-8 w-full py-5 bg-blue-600 text-white rounded-3xl font-black hover:scale-105 active:scale-95 transition-all shadow-lg"
+               >
+                 Sign Up Now!
+               </button>
             </div>
           ))}
         </div>

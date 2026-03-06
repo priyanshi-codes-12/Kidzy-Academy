@@ -17,14 +17,16 @@ export default function Hero() {
         world of wonders! Are you ready to explore?
       </p>
 
-      {/* Bouncy CTA Button */}
+      {/* Bouncy CTA Button wrapped in an anchor tag */}
       <div className="mt-12">
-        <button className="bg-orange-500 text-white px-10 py-5 rounded-full font-black text-2xl 
-                           shadow-[0_8px_0_0_#c2410c] hover:shadow-[0_4px_0_0_#c2410c] 
-                           hover:translate-y-1 active:shadow-none active:translate-y-2 
-                           transition-all duration-150 uppercase tracking-wide">
-          Let's Go! 🚀
-        </button>
+        <a href="#games">
+          <button className="bg-orange-500 text-white px-10 py-5 rounded-full font-black text-2xl 
+                             shadow-[0_8px_0_0_#c2410c] hover:shadow-[0_4px_0_0_#c2410c] 
+                             hover:translate-y-1 active:shadow-none active:translate-y-2 
+                             transition-all duration-150 uppercase tracking-wide">
+            Let's Go! 🚀
+          </button>
+        </a>
       </div>
     </section>
   );

@@ -32,10 +32,10 @@ export default function Navbar({ onLoginClick }) {
       {/* NAV LINKS */}
       <div className="hidden lg:flex gap-8 font-black text-blue-900/60 uppercase text-xs tracking-widest">
         <a href="#games" className="hover:text-blue-600 transition-colors">Games</a>
-        <a href="#stories" className="hover:text-blue-600 transition-colors">Stories</a>
-        <a href="#team" className="hover:text-blue-600 transition-colors">Team</a>
         <a href="#art" className="hover:text-blue-600 transition-colors">Art</a>
+        <a href="#stories" className="hover:text-blue-600 transition-colors">Stories</a>
         <a href="#science" className="hover:text-blue-600 transition-colors">Science</a>
+        <a href="#team" className="hover:text-blue-600 transition-colors">Team</a>
       </div>
 
       {/* LOGIN BUTTON */}

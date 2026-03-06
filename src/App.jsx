@@ -9,9 +9,11 @@ import Creative from './Components/Creative';
 import Stories from './Components/Stories';
 import Mentors from './Components/Mentors';
 import End from './Components/End';
+import Signup from "./Components/Signup"; 
 
 export default function App() {
   const [view, setView] = useState("home");
+  const [selectedTier, setSelectedTier] = useState(null);
   
   return (
     <main className="flex flex-col min-h-screen">
@@ -19,7 +21,6 @@ export default function App() {
         <div className="bg-linear-to-b from-yellow-300 via-blue-400 to-indigo-900 min-h-screen">
           <Navbar onLoginClick={() => setView("login")} />
           
-          {/* Main Content with IDs for Navbar Scrolling */}
           <div className="grow pt-24"> 
             <div id="home"><Hero /></div>
             <div id="games"><Games /></div>
@@ -27,14 +28,22 @@ export default function App() {
             <div id="stories"><Stories /></div>
             <div id="science"><Lab /></div>
             <div id="team"><Mentors /></div>
-            <End />
+            
+            {/* 🚨 Prop passed here to trigger the Signup view */}
+            <End onSignup={(tier) => {
+              setSelectedTier(tier);
+              setView("signup");
+            }} />
           </div>
 
           <Footer /> 
         </div>
-      ) : (
-        /* The Clean Login View */
+      ) : view === "login" ? (
         <Login onBack={() => setView("home")} />
+      ) : (
+        /* 🚨 Returning to 'home' preserves the scroll position 
+           where the user left off at the bottom of the page */
+        <Signup tier={selectedTier} onBack={() => setView("home")} />
       )}
     </main>
   );
