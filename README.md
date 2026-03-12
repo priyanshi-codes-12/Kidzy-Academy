@@ -24,9 +24,6 @@ A high-energy, interactive **educational landing page** built for kids and paren
 | 🏆 **Tiered Signup System** | Dedicated **Explorer** (Sky Blue) and **Champion** (Gold) tiers with unique themed palettes |
 | 🌈 **Animated Rainbow Graduation** | Custom SVG-animated rainbow that draws itself as the user scrolls to the final section |
 | ☁️ **Interactive Storytelling** | Deep-blue sky themed section with drifting clouds and smooth animated elements |
-| 🔬 **Science Lab Section** | Immersive experiment-themed section with interactive visuals |
-| 🎨 **Creative Arts Section** | Art and creativity transition zone with vibrant visual design |
-| 👩‍🏫 **Mentor Profiles** | Clean team/teacher showcase section |
 | 🌙 **Midnight Magic Footer** | High-contrast dark footer with twinkling stars and 3D glassmorphism navigation buttons |
 | 📱 **Responsive Design** | Fully responsive layout that adapts to all screen sizes |
 
